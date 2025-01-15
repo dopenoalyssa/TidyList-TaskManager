@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TidyList | Task Manager</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="assets/img/favicon.png" rel="icon" />
+  </head>
+
+  <body>
+    <!--Logo and Input Area-->
+    <div class="todo-container col-12 text-center">
+      <img src="assets/img/logo.png" alt="" />
+
+      <div class="input-group mb-4">
+        <input
+          type="text"
+          class="form-control"
+          id="todoInput"
+          placeholder="Add a new task"
+        />
+        <input
+          type="text"
+          class="form-control"
+          id="descriptionInput"
+          placeholder="Add description"
+        />
+        <button class="btn btn-primary" id="addButton">Add Task</button>
+      </div>
+      <!--Task List Display-->
+      <div class="task-list" id="todoList"></div>
+      <hr />
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <div class="stats">
+          <span class="badge bg-primary" id="todoCount">0 total</span>
+          <span class="badge bg-success" id="completedCount">0 completed</span>
+          <span class="badge bg-warning" id="incompleteCount"
+            >0 incomplete</span
+          >
+        </div>
+        <button class="btn btn-danger btn-sm" id="deleteButton">
+          Delete All
+        </button>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="footer text-center mt-4">
+      <p class="text-muted">
+        &copy; 2025 | Made with ❤️ by
+        <span class="text-primary fw-bold"
+          ><a
+            href="https://github.com/dopenoalyssa"
+            class="highlight-link"
+            target="_blank"
+            >Alyssa D.</a
+          ></span
+        >
+      </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
