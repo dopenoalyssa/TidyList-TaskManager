@@ -42,11 +42,15 @@ body {
 .task-title {
   font-weight: 500;
   margin-bottom: 0.25rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .task-description {
   font-size: 0.875rem;
   color: var(--text-muted);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .completed {
@@ -78,4 +82,66 @@ body {
 .highlight-link:hover {
   color: var(--link-hover-color);
   border-bottom: 1px solid var(--link-hover-color);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 576px) {
+  .todo-container {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .input-group-mobile {
+    flex-direction: column;
+  }
+
+  .input-group-mobile > * {
+    width: 100% !important;
+    border-radius: 4px !important;
+    margin-right: 0 !important;
+  }
+
+  .input-group-mobile .form-control {
+    font-size: 16px;
+  }
+
+  .task-item {
+    padding: 0.75rem;
+  }
+
+  .task-item .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .task-item .btn-group .btn {
+    width: auto;
+  }
+
+  .edit-form .input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .edit-form .input-group > * {
+    width: 100%;
+    margin: 0;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #deleteButton {
+    width: 100%;
+  }
 }
